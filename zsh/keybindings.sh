@@ -1,3 +1,5 @@
+# sshmenu
+bindkey -s '^e' "/$HOME/bin/sshmenu^M"
 # up
 	function up_widget() {
 		BUFFER="cd .."
