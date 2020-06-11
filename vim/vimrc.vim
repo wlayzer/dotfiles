@@ -1,7 +1,6 @@
 " General Vim settings
 	syntax on
 	let mapleader=","
-	set autoindent
 	set tabstop=4
 	set shiftwidth=4
 	set dir=/tmp/
