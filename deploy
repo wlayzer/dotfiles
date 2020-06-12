@@ -79,7 +79,9 @@ check_for_software tmux
 echo
 check_for_software make
 echo 
-
+check_for_software curl
+echo
+check_for_software lpass-cli
 check_default_shell
 
 echo

@@ -1,4 +1,8 @@
 #!/bin/bash
-mkdir tmp
+
+
+sudo apt install -y libx11-dev libxinerma-dev libxft-dev
+mkdir tmp && cd tmp
 git clone https://git.suckless.org/dmenu
-cd 
+cd dmenu
+
