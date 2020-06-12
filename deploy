@@ -77,6 +77,8 @@ check_for_software vim
 echo
 check_for_software tmux
 echo
+check_for_software make
+echo 
 
 check_default_shell
 
@@ -97,7 +99,7 @@ fi
 printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
 printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
 printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
-echo "Copying bin files to /usr/local/bin this will ask for sudo password"
+echo "Copying bin files to /usr/local/bin"
 sudo rsync -av --progress ~/dotfiles/bin/* /usr/local/bin/ --exclude readme.md
 
 echo

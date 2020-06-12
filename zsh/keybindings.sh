@@ -1,5 +1,5 @@
 # sshmenu
-bindkey -s '^e' "/$HOME/bin/sshmenu^M"
+bindkey -s '^e' "~/dotfiles/bin/sshmenu^M"
 # up
 	function up_widget() {
 		BUFFER="cd .."

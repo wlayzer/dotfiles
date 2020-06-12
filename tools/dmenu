@@ -1,0 +1,4 @@
+#!/bin/bash
+mkdir tmp
+git clone https://git.suckless.org/dmenu
+cd 
