@@ -1,14 +1,11 @@
 " General Vim settings
 	syntax on
 	let mapleader=","
-	set tabstop=4
-	set shiftwidth=4
+	set tabstop=1
+	set shiftwidth=1
 	set dir=/tmp/
 	set relativenumber 
 	set number
-
-	autocmd Filetype html setlocal sw=2 expandtab
-	autocmd Filetype javascript setlocal sw=4 expandtab
 
 	set hlsearch
 	nnoremap <C-l> :nohl<CR><C-l>:echo "Search Cleared"<CR>
