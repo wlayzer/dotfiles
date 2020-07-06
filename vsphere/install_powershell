@@ -35,15 +35,8 @@ cd ~/local/share/powershell/Modules
 unzip VMware-PowerCLI-12.0.0-15947286.zip
 
 echo "How to activate PowerCLI module:"
-echo
 echo "pwsh"
-echo 
 echo "Get-Module -ListAvailable PowerCLI* | Import-Module"
-echo
 echo "Set-PowerCLIConfiguration -InvalidCertificateAction Ignore"
-echo
 echo "To test is module works"
-echo
 echo "Get-VICommand"
-
-
