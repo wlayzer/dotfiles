@@ -1,9 +1,11 @@
 #!/bin/bash
+#Install powershell and apply powercli-core module
 #This script is for ubuntu 18.04
 #Source: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7#ubuntu-1804
+#Powercli: https://code.vmware.com/web/tool/12.0.0/vmware-powercli
 
 # Go to downloads dir
-cd /home/$USER/Downloads
+cd ~/Downloads
 
 # Download the Microsoft repository GPG keys
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
@@ -20,5 +22,28 @@ sudo apt-get update
 # Enable the "universe" repositories
 sudo add-apt-repository universe
 
-# Install PowerShell
-sudo apt-get install -y powershell && echo Powershell installed, to open powershell CLI use \"pwsh\"
+# Install PowerShell and unzip
+sudo apt-get install -y powershell unzip && echo Powershell installed, to open powershell CLI use \"pwsh\"
+
+# Download powercli
+echo Download PowerCLI
+wget https://vdc-download.vmware.com/vmwb-repository/dcr-public/2802fdb1-bca3-4875-b76f-901cb15c2b2a/509b4a98-5ee5-4048-9407-28b9f85ba65c/VMware-PowerCLI-12.0.0-15947286.zip
+# Make dir for Modules and copy powercli module
+mkdir -p ~/local/share/powershell/Modules
+mv VMware-PowerCLI-12.0.0-15947286.zip ~/local/share/powershell/Modules
+cd ~/local/share/powershell/Modules
+unzip VMware-PowerCLI-12.0.0-15947286.zip
+
+echo "How to activate PowerCLI module:"
+echo
+echo "pwsh"
+echo 
+echo "Get-Module -ListAvailable PowerCLI* | Import-Module"
+echo
+echo "Set-PowerCLIConfiguration -InvalidCertificateAction Ignore"
+echo
+echo "To test is module works"
+echo
+echo "Get-VICommand"
+
+
