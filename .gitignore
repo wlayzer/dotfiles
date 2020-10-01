@@ -1,3 +1,4 @@
 .DS_Store
 *.swp
 servers.txt
+.snapshots.ps1
