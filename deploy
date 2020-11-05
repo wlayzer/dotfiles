@@ -81,7 +81,7 @@ check_for_software make
 echo 
 check_for_software curl
 echo
-check_for_software lpass-cli
+check_for_software lastpass-cli
 check_default_shell
 
 echo
