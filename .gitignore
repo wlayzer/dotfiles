@@ -1,4 +1,5 @@
 .DS_Store
 *.swp
-servers.txt
+servers.dev.txt
+servers.prod.txt
 .snapshots.ps1
